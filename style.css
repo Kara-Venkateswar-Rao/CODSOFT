@@ -91,7 +91,7 @@ a.active{
     }
 }
 
-@media (max-width:786px){
+@media (max-width:790px){
     /* nav{
         width: 100vw;
     } */
@@ -124,6 +124,12 @@ a.active{
         font-size: 1rem;
     }
     
+}
+@media (max-width:650px) {
+    label.logo{
+        font-size: 15px;
+        padding: 0 10px;
+    }
 }
 
 /**____________________main start_____________________**/
@@ -204,16 +210,7 @@ a.active{
           
 }
 /**__________main media querry_________**/
-/* @media (max-height:1370px){
-    .content1{
-        margin-top: 10%;
-        height: 400px;
-    }
-    .content2{
-        height: 300px;
-        margin-top: 20%;
-    }
-} */
+
 @media (max-width:992px) {
     .content1{
         margin-top: 10%;
@@ -233,8 +230,10 @@ a.active{
 }
 @media (max-width:768px) {
     #main{
+        height: 200%;
         display: flex;
         flex-direction: column;
+        position: relative;
     }
     .content1{
         margin-top: 25%;
@@ -264,7 +263,39 @@ a.active{
     }
     
     .content2{
+        height: 90vh;
+        width: 40vw;
+        margin-top: 0.5%;
+        margin-left: 50%;
+    }
+}
+@media (max-width:650px) {
+    #main{
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    #main h1{
+        font-size: 25px;
+    }
+    #main p{
+        font-size: 15px;
+    }
+    .content1 {
+        margin-top: 20%;
+        height: 60%;
+    }
+    .content1 h1{
+        margin-top: 10%;
+    }
+    .content2{
+        height: 10%;
+        background: #000;
+        /* height: 10vh; */
         display: none;
+        
     }
 }
 
@@ -281,7 +312,7 @@ a.active{
 #page1 img{
     height: 100%;
     width:100%;
-    object-fit: fill;
+    object-fit: cover;
     background-position: center;
     
 }
@@ -307,7 +338,7 @@ a.active{
     backdrop-filter: blur(10px);
     position: absolute;
     margin: 5%;
-    /* color: whitesmoke; */
+    overflow: hidden;
     color: #000;
 }
 .abt{
@@ -324,11 +355,10 @@ a.active{
     text-transform: capitalize;
 }
 .btn{
-    /* height: 60px; */
-    margin-left: 40%;
+    
+    margin-left: 20%;
     margin-top: 25%;
-    /* background: #000; */
-    width: 60%;
+    width: 100%;
 }
 .btn .hire{
     height: 50px;
@@ -379,99 +409,130 @@ a.active{
 .btn .download:hover a{
     color: black;
 }
+/**_____media querry page 1_______**/
 
-/* @media (max-width:750px) {
+@media (max-width:790px) {
     #page1{
+        margin-top: 30px;
+        height: 120%;
+        width: 100%;
+        /* position: relative; */
+    }
+    #page1 .abtcontent{
+        margin-top: 5%;
+        height: 100%;
+    }
+    .abtcontent p{
+        margin-top: 20%;
+    }
+    .btn{
+        height: 40px;
+        margin-top: 10%;
+        margin-left: 50px;
+    }
+    .btn .hire{
+        font-size: 11px;
+        height: 40px;
+        width: 120px;
+    }
+    .btn .download{
+        font-size: 11px;
+            height: 40px;
+            width: 130px;
+    }
+}
+@media (max-width:655px){
+    #page1{
+        margin-top: 25%;
+        height: 80%;
+        width: 100%;
+        position: relative;
+    }
+    #page1 .abtcontent{
+        margin-top: 7%;
+        height: 90%;
+    }
+    .abt{
+        margin-left: 15%;
         display: flex;
         flex-direction: column;
-    }
-    .aboutme{
-        margin-top: 100px;
-        height: 300px;
-        width: 200px;
-        border-top-right-radius: 50px;
-        overflow: hidden;
-    
-    }
-    .abtcontent{
-        margin-top: 50px;
-        margin-left: 5%;
-        height: 200px;
-        width: 300px;
-        overflow: hidden;
+        align-items: center;
     }
     .abtcontent h2{
-        font-size: 15px;
-        color: white;
+        font-size: 17px;
+        margin-left: 0%;
     }
-    .abtcontent p{
-        margin-top: 50px;
-        margin-right: 20px;
-        color: white;
+    .abt p{
+        font-size: 14px;
+        font-family: cursive;
     }
-    
+    #page1 h2::after{
+        margin-top: 3%;
+    }
+    .btn{
+        margin-top: 10px;
+        margin-left: 100px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* background-color: #000; */
+    }
+    .btn .hire{
+        height: 35px;
+        width: 65%;
+        padding: 0 10px;
+        font-weight: 600;
+    }
+    .btn .hire a{
+        font-size: 10px;
+    }
+    .btn .download{
+        height: 35px;
+        width: 65%;
+        margin-top: 5px;
+        margin-left: 0;
+        font-weight: 600;
+        padding: 0 10px;
 
+    }
+    .btn .download a{
+        font-size: 10px;
+    }
 }
-@media (width>1020px) and (midth<1050px){
-    .aboutme{
-        margin-top: 10%;
-        height: 300px;
-        width: 200px;
-        border-top-right-radius: 50px;
-        overflow: hidden;
-    
-    }
-    .abtcontent{
-        margin-top: 10%;
-        margin-left: 10%;
-        height: 200px;
-        width: 500px;
-        overflow: hidden;
-    }
-    .abtcontent h2{
-        font-size: 15px;
-        color: white;
-    }
-    .abtcontent p{
-        margin-top: 50px;
-        margin-right: 20px;
-        color: white;
-    }
-} */
+
 
 /**___________________Page 2_____________________**/
 #page2{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background:#333333;
     color: white;
     overflow: hidden;
     
 }
+#page2 .hed{
+    width: 90%;
+    margin-left: 12%;
+    /* background-color:#00ff51; */
+    overflow: hidden;
+    position: relative;
+}
 #page2 h2{
     margin-top: 5%;
-    margin-left: 30%;
+    margin-left: 20%;
     font-weight: 800;
 }
 #page2 h2::after{
     content: "";
     height: 2px;
-    width: 50%;
+    width: 52%;
     background-color: #57D87F;
     position: absolute;
     margin-top: 2%;
     margin-left: 10%;
 }
 
-
-/* #page2 .line .dash{
-    margin-top: 20px;
-    margin-left: 100px;
-    background: #57D87F;
-    height: 2px;
-    width: 60%;
-    color: #000;
-} */
 #box-container{
     height: 350px;
     width: 70%;
@@ -504,40 +565,75 @@ a.active{
     padding: 5%;
 }
 
-/* @media (max-width:750px) {
-    #page2{
-        display: flex;
-        flex-direction: column;
-        width: 600px;
-        height: 140%;
+@media (max-width:890px) {
+    #page2 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+   }
+   #page2 .hed{
+    margin-left: 10%;
+    position: relative;
+    overflow: hidden;
+   }
+   #page2 h2{
+        margin-top: 5%;
+        margin-left: 20%;
+        font-size: 20px;
+        font-weight: 600;
     }
-    #page2 .line{
-        margin-left: 15px;
-    }
-    #page2 .line h2{
-        font-size: 15px;
-    }
-    #page2 .line .dash{
-        width: 60%;
-        margin-bottom: 35px;
-        margin-left: 40px;
+    #page2 h2::after{
+        width: 51%;
     }
     #box-container{
-        height: 70%;
-        width: 100vw;
+        display: flex;
+        height: 350px;
+        width: 90%;
+        position: relative;
+        margin-left: 5%;
+    }
+    #box-container .box{
+        height: 200px;
+        width: 180px;
+    }
+
+}
+@media (max-width:650px) {
+    #page2{
+        height: 120%;
         display: flex;
         flex-direction: column;
     }
-    #box-container .box{
-        margin: 5%;
+    #page2 h2{
+        font-size: 17px;
+        font-weight: 600;
+        margin-left: 90px;
     }
-
-} */
-/**____________________PAGE 3_______________________**/
+    #page2 #box-container{
+        display: flex;
+        flex-direction: column;
+    }
+    #box-container{
+        height: 60%;
+        margin-top: 100px;
+    }
+    #box-container .box{
+        margin-top: 15px;
+        padding: 10px;
+    }
+}
+    /**____________________PAGE 3_______________________**/
 #page3{
-    height: 100vh;
+    height: 100%;
      width: 100%;
      background:#57D87F;
+     
+}
+#page3 .hed{
+    position: relative;
+    overflow: hidden;
 }
 
 #page3 h2::after{
@@ -574,11 +670,14 @@ a.active{
     text-transform: capitalize;
 }
 .educontainer a{
-    margin-left: 83%;
+    margin-left: 75%;
     font-weight: 700;
     text-transform: capitalize;
     color: #000;
     transition: all ease 0.5s;
+}
+.educontainer .a1{
+    text-align: right;
 }
 .educontainer a:hover{
     color: #00ff51;
@@ -589,6 +688,69 @@ a.active{
     color: #4e5e58;
     font-weight: 700;
 }
+
+/**page3 media querry**/
+@media (max-width:844px) {
+    #page3{
+        height: 80%;
+    }
+    #page3 h2{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .educontainer .edu h3{
+        font-size: 17px;
+    }
+    .educontainer .edu h4{
+        font-size: 15px;
+    }
+    .educontainer p{
+        font-size: 12px;
+    }
+    .educontainer a{
+        margin-left: 70%;
+        font-size: 15px;
+    }
+}
+@media (max-width:660px) {
+    #page3{
+        height: 80%;
+    }
+    .educontainer{
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    .educontainer .edu{
+        /* background: #00ff51; */
+        padding: 5px;
+        margin-left: 5px;
+        /* border-bottom: none; */
+    }  
+    .educontainer .edu a{
+        margin-left: 0;
+        font-size: 15px;
+    }
+    .educontainer .edu h3{
+        margin-top: 20px;
+    }
+    .educontainer .edu h4{
+        font-size: 15px;
+        margin-top: 8px;
+    }
+    .educontainer p{
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .educontainer .edu a{
+        margin-left: 10px;
+        margin-top:100px;
+        font-size: 12px;
+    }
+}
+
+
 
 /**_____________________PAGE 4_______________________**/
 #page4{
@@ -608,7 +770,8 @@ a.active{
 .second{
     height: 90%;
     width: 60%;
-    margin-top: 5%;
+    margin-top: 1%;
+    margin-left: 50px;
     /* background-color: #57D87F; */
     color: white;
     padding: 10%;
@@ -627,13 +790,46 @@ a.active{
     object-fit: cover;
 
 }
-
+/**__________Page 4 media querry______**/
+@media (max-width:950px) {
+    #page4 .first{
+        width: 40%; 
+    }
+}
+@media (max-width:650px) {
+    #page4{
+        height: 60%;
+        padding: 5%;
+        display: flex;
+        align-items: center;
+    }
+    #page4 .first{
+        height: 50%;
+        margin-top: 35%; 
+        display: none;
+    }
+    .second{
+        margin-left: 5px;
+        width: 100%;
+        padding: 1px;
+        position: relative;
+    }
+    .second p{
+        margin-top: 20px;
+        font-size: medium;
+        line-height: 20px;
+    }
+}
 /**_________________PAGE 5___________________**/
 #page5{
-    height: 70vh;
+    height: 80%;
     width: 100%;
     background: #57D87F;
 }
+#page5 .hed{
+    position: relative;
+    overflow: hidden;
+}   
 #page5 h2{
     font-weight: 800;
     margin-top: 5%;
@@ -650,7 +846,7 @@ a.active{
 }
 #page5 .exp{
     /* background-color: #00ff51; */
-    height: 33%;
+    height: 36%;
     width: 90%;
     margin-top: 10%;
     margin-left: 5%;
@@ -658,11 +854,15 @@ a.active{
     border-bottom: 1px solid black;
 }
 .exp h4,p{
-    margin: 1.5%;
+    margin-top: 1.5%;
+    margin-left: 1%;
     text-transform: capitalize;
 }
+.exp p{
+    margin-bottom: 35px;
+}
 .exp a{
-    margin-left: 84%;
+    margin-left: 70%;
     font-weight: 700;
     text-transform: capitalize;
     color: #000;
@@ -679,6 +879,43 @@ a.active{
 }
 h3{
     margin: 0.5%;
+}
+/**_________page5 media querry____________**/
+@media (max-width:950px) {
+    #page5 h2{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .exp h3{
+        font-size: 17px;
+    }
+    .exp h4{
+        font-size: 15px;
+    }
+    .exp p{
+        font-size: 13px;
+    }
+    .exo a{
+        font-size: 13px;
+    }
+}
+@media (max-width:650px) {
+    #page5{
+        height: 60%;
+    }
+    #page5 h2{
+        font-size: 17px;
+    }
+    #page5 .exp{
+        height: 60%;
+    }
+    .exp p{
+        margin-bottom: 55px;
+    }
+    .exp a{
+        font-size: 15px;
+        margin-left: 2%;
+    }
 }
 /**_______________imagebox_____________**/
 #imgbox{
@@ -716,7 +953,38 @@ h3{
     background: #00000091;
     padding: 5%;
 }
-
+/**______media quary for image box__________**/
+@media (max-width:850px) {
+    #imgbox{
+        height: 210px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #imgbox .abt{
+        height: 80%;
+    }
+    .abt p{
+        font-size: 15px;
+    }
+}
+@media (max-width:650px) {
+    #imgbox{
+        height: 150px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #imgbox .abt{
+        height: 80%;
+        margin-left: 22%;
+    }
+    .abt p{
+        font-size: 12px;
+    }
+}
 /**______________contect__________________**/
 #contect{
     margin-left: 0.8%;
