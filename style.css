@@ -6,7 +6,7 @@ text-decoration:none;
 list-style: none;
 text-transform: uppercase;
 font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-transition: alle ease 0.5s;
+transition: all ease 0.5s;
 }
 
 html, body{
@@ -16,6 +16,7 @@ html, body{
 body{
     background:#57D87F;
     overflow-x: hidden;
+    transition: all ease 0.5s;
 }
 body::-webkit-scrollbar{
     width: 5px;
@@ -25,6 +26,12 @@ body::-webkit-scrollbar{
 body::-webkit-scrollbar-thumb{
     background:linear-gradient(black, #57D87F);    
     border-radius: 30px;
+}
+body p:hover{
+    scale: 1.02;
+}
+body h4:hover{
+    scale: 1.03;
 }
 
 /**_________________________NAV BAR_____________________**/
@@ -535,18 +542,17 @@ a.active{
 
 #box-container{
     height: 350px;
-    width: 70%;
-    /* background-color: red; */
+    width: 80%;
     margin-top: 5%;
-    margin-left: 15%;
+    margin-left: 10%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
 }
 #box-container .box{
-    height: 250px;
-    width: 200px;
+    height: 280px;
+    width: 230px;
     border: 2px solid #00ff51;
     border-radius: 5px;
     /* background-color: #00ff51; */
@@ -562,7 +568,7 @@ a.active{
     height: 90%;
     width: 100%;
     object-fit: contain;
-    padding: 5%;
+    padding: 10px;
 }
 
 @media (max-width:890px) {
@@ -994,11 +1000,8 @@ h3{
    display: flex;
    padding-top: 5%;
    position: relative;
-   /* justify-content: space-around; */
 }
-/* #contect h2{
-    margin-top: %;
-} */
+
 #contect .drop-msg{
     /* background-color: #00ff51; */
     height: 80%;
@@ -1034,28 +1037,29 @@ h3{
     color: #000;
 }
 .send-msg{
-    height: 15%;
-    width: 33%;
-    font-weight: 500;
+    height: 60px;
+    width: 230px;
+    font-size: 17px;
+    font-weight: 600;
     font-family: cursive;
     background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 65%;
+    margin-left: 406px;
     margin-top: 4%;
     transition: all ease 0.5s;
     border: 1px solid black;
+    cursor: pointer;
 }
 .send-msg:hover{
     box-shadow: -5px 5px black;
 }
 
 .contectbox{
-    margin-left: 10%;
+    margin-left: 5%;
     height: 80%;
     width: 30%;
-    /* background-color: #00ff51; */
    
 }
 .contectbox h2{
@@ -1070,25 +1074,25 @@ h3{
     scale: 1.02;
 }
 .contectbox button{
-    height: 15%;
-    width: 60%;
-    margin-left: 40%;
+    height: 60px;
+    width: 230px;
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 150px;
     margin-top: 10%;
 }
 #social{
-    height: 10.5%;
-    width: 50%;
+    height: 20%;
+    width: 55%;
     margin-top: 40px;
-    /* background-color: cyan; */
     display: flex;
     margin-left: 43%;
-    /* justify-content: space-between; */
+    justify-content: space-between;
 }
 #social .media{
-    height: 100%;
-    width: 25%;
+    height: 45px;
+    width: 45px;
     font-size: 25px;
-    margin-right: 15px;
     border-radius: 50%;
     background-color: whitesmoke;
     display: flex;
@@ -1110,25 +1114,157 @@ h3{
     color: #000;
     font-family: cursive;
     font-weight: 600;
-    font-size: 15px;
 }
 .contectbox button:hover{
     box-shadow: -5px 5px black;
 }
-.copyright{
-    position: absolute;
-    margin-top: 40%;
-    margin-left: 20%;
-    text-transform: capitalize;
-}
-/**_________________Footer_____________**/
 
-/* footer{
-    height: 50%;
+
+/**contect media quarry**/
+@media (max-width:1024px) {
+    .contectbox button{
+        margin-left: 20%;
+    }
+    #social{
+        width: 230px;
+        margin-left: 20%;
+    }
+    .send-msg{
+        margin-left: 52%;
+    }
+}
+@media (max-width:768px) {
+    .drop-msg{
+        display: flex;
+    }
+    .drop-msg input{
+        font-size: 13px;
+    }
+    .drop-msg textarea{
+        font-size: 13px;
+    }
+    .drop-msg .send-msg{
+        margin-left: 55%;
+        height: 12%;
+        width: 43%;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .drop-msg h2{
+        font-size: 20px;
+    }
+    .contectbox{
+        margin-left: 50px;
+        width: 35%;
+    }
+    .contectbox h2{
+        font-size: 20px;
+    }
+    .contectbox p{
+        font-size: 13px;
+    }
+    .contectbox button{
+        height: 12%;
+        width: 60%;
+        margin-left: 30%;
+        font-size: 10px;
+        /* font-weight: 600; */
+    }
+    .contectbox button a{
+        font-size: 11px;
+    }
+    #social{
+        width: 60%;
+        height: 17%;
+        margin-left: 32%;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    #social .media{
+        height: 40px;
+        width: 40px;
+    }
+    #social i{
+        font-size: 20px;
+    }
+}
+@media (max-width:600px) {
+    #contect{
+        height: 120%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #contect .drop-msg{
+        width: 90%;
+        margin-top: 5%;
+    }
+    .drop-msg .send-msg{
+        height: 35px;
+        width: 150px;
+        margin-left: 45%;
+    }
+    #contect .contectbox{
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 1%;
+    }
+    .contectbox button{
+        height: 35px;
+        width: 150px;
+        margin-left: 45%;
+    }
+    #social{
+        width: 150px;
+        margin-top: 5%;
+        margin-left: 45%;
+    }
+    #social .media{
+        height: 35px;
+        width: 35px;
+    }
+    #social .media i{
+        font-size: 17px;
+    }
+    
+}
+
+/**_________copyright__________**/
+.copyright{
     width: 100%;
-    background-color: #000;
-} */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    text-align: center;
+}
+.copyright i{
+    padding: 0 5px;
+}
+.copyright span{
+    font-weight: 700;
+    padding: 0 5px;
+}
+@media (max-width:768px) {
+    .copyright{
+        font-size: 13px;
+    }
+}
+@media (max-width:650px){
+    .copyright{
+        font-size: 12px;
+    }
+}
+
+/**_________________Footer_____________**/
+footer{
+    width: 100%;
+} 
 footer .top{
+    width: 100%;
     background-color: #4e5e58c4;
     height: 40px;
     display: flex;
