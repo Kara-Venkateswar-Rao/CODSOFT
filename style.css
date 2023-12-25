@@ -6,7 +6,10 @@ text-decoration:none;
 list-style: none;
 text-transform: uppercase;
 font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-transition: all ease 0.5s;
+}
+*::selection{
+    color: #F0ECE5;
+    background: #3b3a5c;
 }
 
 html, body{
@@ -14,17 +17,51 @@ html, body{
  height: 100%;
 }
 body{
-    background:#57D87F;
+    background:#F0ECE5;
     overflow-x: hidden;
-    transition: all ease 0.5s;
+}
+body #back{
+    background-color: #F0ECE5;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    position: fixed;
+    top: 90%;
+    left: 95%;
+    box-shadow: 0 5px 10px black;
+    cursor: pointer;
+}
+#back i{
+    font-size: 30px;
+}
+#back:hover a i {
+    bottom: 5px;
+    color: #31304D;
+}
+#back:hover{
+    scale: 1.1;
+}
+@media (max-width:900px) {
+    body #back{
+        left: 92%;
+    }
+}
+@media (max-width:650px) {
+    body #back{
+        left: 88%;
+    }
 }
 body::-webkit-scrollbar{
     width: 5px;
-    background-color: black;
+    background-color: #F0ECE5;
     
 }
 body::-webkit-scrollbar-thumb{
-    background:linear-gradient(black, #57D87F);    
+    background:#31304D;   
     border-radius: 30px;
 }
 body p:hover{
@@ -37,16 +74,17 @@ body h4:hover{
 /**_________________________NAV BAR_____________________**/
 nav{
     height: 10%;
-    background-color:#57D87F;
+    /* background-color:#57D87F; */
+    background-color: #31304D;
     text-transform: uppercase;
-    box-shadow: 0px 2px 10px #2c3532;
+    box-shadow: 0px 2px 10px #000000;
     position: fixed;
     width: 100%;
     z-index: 1;
 }
 
 label.logo{
-    color:#121514;
+    color:rgb(182, 187, 196);
     padding: 0 20px;
     line-height: 10vh;
     font-size: 1.5rem;
@@ -55,7 +93,7 @@ label.logo{
 
 label.menu-bar{
     float: right;
-    color:#121514;
+    color:#B6BBC4;
     font-size: 25px;
     padding: 0 20px;
     line-height: 10vh;
@@ -63,7 +101,8 @@ label.menu-bar{
     cursor: pointer; 
 }
 nav ul{
-    float: right;   
+    float: right;
+     
 }
 #check{
     display: none;
@@ -71,20 +110,23 @@ nav ul{
 nav ul li{
     display: inline-block;
     line-height: 10vh;
+    
 }
 nav ul li a{
-    color:#121514;
-    padding: 4px 20px;
-    font-size: 0.9em;
+    color:#B6BBC4;
+    padding: 4px 15px;
+    font-size: 15px;
+    font-weight: 600;
     border-radius: 3px;
+    transition: all ease 0.5s; 
 }
 a.active, a:hover{
     background: none;
-    color: whitesmoke;
+    color: #F4DFC8;
 }
 a.active{
-    background: #00ff51;
-    color: black;
+    background: #B6BBC4;
+    color: #161A30;
 }
 
 @media (width < 985px){
@@ -93,15 +135,11 @@ a.active{
     }
 
     nav ul li a{
-        /* font-size: 15px; */
-        padding: 0 8px;
+        padding: 0 5px;
     }
 }
 
 @media (max-width:790px){
-    /* nav{
-        width: 100vw;
-    } */
     label.menu-bar{
         display: block;
     }
@@ -109,7 +147,7 @@ a.active{
         position: fixed;
         width: 100%;
         height: 100%;
-        background-color: #121514;
+        background-color: #161A30;
         text-align: center;
         right: -100%;
         transition: all 0.5s;
@@ -119,16 +157,20 @@ a.active{
         right: 0;
         
     }
-    a:active :checked ~ ul{
-        right: -100%;
-    }
     nav ul li{
         display: block;
         padding: 15px 0;
     }
     nav ul li a{
-        color: white;
+        color: #F4DFC8;
         font-size: 1rem;
+        font-weight: 600;
+    }
+    a:hover{
+        color: #B6BBC4;
+    }
+    a.active{
+        color: #161A30;
     }
     
 }
@@ -158,7 +200,7 @@ a.active{
     margin-left: 30%;
 }
 .content1 p{
-    font-size: ;
+    font-size: 1.2rem;
     margin-top: 5%;
     margin-left: 30%;
 }
@@ -174,7 +216,7 @@ a.active{
 }
 .content1 .webdevlop i{
     margin-left: 3%;
-    color: #00ff51;
+    color: #F0ECE5;
 }
 .content1 button{
     height: 99%;
@@ -182,17 +224,17 @@ a.active{
     /* margin: 30px; */
     padding: 7px 15px;
     border-radius: 3px;
-    background:#00ff51;
+    background:#B6BBC4;
     /* align-items: center; */
     transition: all ease 0.5s;
-    font-weight:700;
-    font-size: 15px;
+    font-weight:600;
+    font-size: 1rem;
 }
 
 .content1 button:hover{
-    background: #333333;
-    color: #57D87F;
-    border: 2px solid #00ff51;
+    background: #31304D;
+    color: #F0ECE5;
+    border: 2px solid #B6BBC4;
     box-shadow: 4px 4px 10px black;
 }
 .content1 button:active{
@@ -278,9 +320,8 @@ a.active{
 }
 @media (max-width:650px) {
     #main{
-        height: 70%;
+        height: 50%;
         display: flex;
-        flex-direction: column;
         align-items: center;
         
     }
@@ -292,14 +333,18 @@ a.active{
     }
     .content1 {
         margin-top: 20%;
-        height: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
     }
     .content1 h1{
         margin-top: 10%;
     }
     .content2{
         height: 10%;
-        background: #000;
+        /* background: #000; */
         /* height: 10vh; */
         display: none;
         
@@ -325,7 +370,7 @@ a.active{
 }
 #page1 h2{
     margin-top: 10%;
-    margin-left: 30%;
+    margin-left: 0%;
 }
 #page1 h2::after{
     content: "";
@@ -341,48 +386,54 @@ a.active{
 .abtcontent{
     height: 130%;
     width: 90%;
-    background-color:#f5f5f5c2;
-    backdrop-filter: blur(10px);
+    background-color:#b6bbc4b9;
+    backdrop-filter: blur(7px);
     position: absolute;
     margin: 5%;
     overflow: hidden;
     color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
 }
 .abt{
-    height: 50%;
-    width: 55%;
-    /* background-color: #00ff51; */
-    margin-bottom: 10%;
-    margin-left: 23%;
-    /* color: whitesmoke; */
+    height: 40%;
+    width: 60%;
     color: #000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .abtcontent p{
-    margin-top: 25%;
+    font-size: 1.4rem;
+    font-weight: 600;
     text-transform: capitalize;
+    font-family: 'Courier New', Courier, monospace;
 }
 .btn{
-    
-    margin-left: 20%;
-    margin-top: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
 }
 .btn .hire{
     height: 50px;
     width: 170px;
     font-weight: 800;
-    color: black;
+    color: #161A30;
     padding: 7px 30px;
-    background:#00ff51;
+    background:#B6BBC4;
     transition: all ease 0.5s;
     border-radius: 5px;
     border: 2px solid black;
     cursor: pointer;
 }
 .hire:hover {
-    background:#2c3532;
+    background:#161A30;
     /* color: #57D87F; */
-    border: 2px solid #00ff51;
+    border: 2px solid #B6BBC4;
 }
 
 .btn .download{
@@ -391,15 +442,15 @@ a.active{
     margin-left: 15px;
     font-weight: 800;
     padding: 7px 15px;
-    background:#2c3532;
-    color: #57D87F;
+    background:#161A30;
+    color: #B6BBC4;
     transition: all ease 0.5s;
     border-radius: 5px;
-    border: 2px solid #00ff51;
+    border: 2px solid #B6BBC4;
     cursor: pointer;
 }
 .btn .download:hover{
-    background:#00ff51;
+    background:#B6BBC4;
     border: 2px solid black;
 }
 .btn .hire a{
@@ -407,11 +458,11 @@ a.active{
     color:black;
 }
 .btn .hire:hover a{
-    color: #57D87F;
+    color: #B6BBC4;
 }
 .btn .download a{
     text-decoration: none;
-    color: #57D87F;
+    color: #B6BBC4;
 }
 .btn .download:hover a{
     color: black;
@@ -460,7 +511,6 @@ a.active{
         height: 90%;
     }
     .abt{
-        margin-left: 15%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -471,22 +521,21 @@ a.active{
     }
     .abt p{
         font-size: 14px;
-        font-family: cursive;
+        font-family:'Courier New', Courier, monospace;
+        font-weight: 900;
     }
     #page1 h2::after{
         margin-top: 3%;
     }
     .btn{
-        margin-top: 10px;
-        margin-left: 100px;
         height: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
-        /* background-color: #000; */
+        margin-left: 0;    
     }
     .btn .hire{
-        height: 35px;
+        height: 30px;
         width: 65%;
         padding: 0 10px;
         font-weight: 600;
@@ -495,7 +544,7 @@ a.active{
         font-size: 10px;
     }
     .btn .download{
-        height: 35px;
+        height: 30px;
         width: 65%;
         margin-top: 5px;
         margin-left: 0;
@@ -513,8 +562,8 @@ a.active{
 #page2{
     height: 100%;
     width: 100%;
-    background:#333333;
-    color: white;
+    background:#161A30;
+    color: #F0ECE5;
     overflow: hidden;
     
 }
@@ -534,7 +583,7 @@ a.active{
     content: "";
     height: 2px;
     width: 52%;
-    background-color: #57D87F;
+    background-color: #F0ECE5;
     position: absolute;
     margin-top: 2%;
     margin-left: 10%;
@@ -553,13 +602,16 @@ a.active{
 #box-container .box{
     height: 280px;
     width: 230px;
-    border: 2px solid #00ff51;
     border-radius: 5px;
-    /* background-color: #00ff51; */
+    transition: all ease 0.5s;
+    
+}
+#box-container .box:hover{
+    scale: 1.1;
 }
 #box-container h3{
     font-size: 12px;
-    color: white;
+    color: #F0ECE5;
     text-align: center;
     font-weight: 800;
     /* margin-top: 100%; */
@@ -612,10 +664,13 @@ a.active{
         display: flex;
         flex-direction: column;
     }
+    #page2 .hed{
+        margin-left: 40px;
+    }
     #page2 h2{
         font-size: 17px;
         font-weight: 600;
-        margin-left: 90px;
+        /* margin-left: 75px; */
     }
     #page2 #box-container{
         display: flex;
@@ -623,10 +678,10 @@ a.active{
     }
     #box-container{
         height: 60%;
-        margin-top: 100px;
+        margin-top: 20px;
     }
     #box-container .box{
-        margin-top: 15px;
+        margin-top: 5px;
         padding: 10px;
     }
 }
@@ -634,7 +689,7 @@ a.active{
 #page3{
     height: 100%;
      width: 100%;
-     background:#57D87F;
+     background:#F0ECE5;
      
 }
 #page3 .hed{
@@ -645,7 +700,7 @@ a.active{
 #page3 h2::after{
     content: "";
     height: 2px;
-    background-color: #000;
+    background-color: #161A30;
     width: 50%;
     position: absolute;
     margin-top: 2%;
@@ -674,20 +729,21 @@ a.active{
 .educontainer h4,p{
     margin: 1.5%;
     text-transform: capitalize;
+    transition: all ease 0.5s;
 }
 .educontainer a{
     margin-left: 75%;
     font-weight: 700;
     text-transform: capitalize;
-    color: #000;
+    color: #161A30;
     transition: all ease 0.5s;
 }
 .educontainer .a1{
     text-align: right;
 }
 .educontainer a:hover{
-    color: #00ff51;
-     
+    
+    color: #B6BBC4; 
 }
 .educontainer a span{
     text-transform: none;
@@ -762,7 +818,7 @@ a.active{
 #page4{
     height: 100vh;
     width: 100vw;
-    background: #000;
+    background: #161A30;
     display: flex;
 }
 .first{
@@ -770,7 +826,7 @@ a.active{
     margin-top: 9.7%;
     height: 80%;
     width: 30%;
-    background-color: #00ff51;
+    background-color: #F0ECE5;
     overflow: hidden;
 }
 .second{
@@ -778,8 +834,9 @@ a.active{
     width: 60%;
     margin-top: 1%;
     margin-left: 50px;
-    /* background-color: #57D87F; */
-    color: white;
+    display: flex;
+    align-items: center;
+    color: #F0ECE5;
     padding: 10%;
 }
 .second p{
@@ -788,6 +845,10 @@ a.active{
     font-family: 'Courier New', Courier, monospace;
     text-align: left;
     margin: 10%;
+    transition: all ease 1s;
+}
+.second p:hover{
+    scale: 1.2;
 }
 .first img{
     margin-top: 4%;
@@ -819,6 +880,8 @@ a.active{
         width: 100%;
         padding: 1px;
         position: relative;
+        display: flex;
+        align-items: center;
     }
     .second p{
         margin-top: 20px;
@@ -830,7 +893,7 @@ a.active{
 #page5{
     height: 80%;
     width: 100%;
-    background: #57D87F;
+    background: #F0ECE5;
 }
 #page5 .hed{
     position: relative;
@@ -863,6 +926,7 @@ a.active{
     margin-top: 1.5%;
     margin-left: 1%;
     text-transform: capitalize;
+    transition: all ease 0.5s;
 }
 .exp p{
     margin-bottom: 35px;
@@ -871,7 +935,7 @@ a.active{
     margin-left: 70%;
     font-weight: 700;
     text-transform: capitalize;
-    color: #000;
+    color: #161A30;
     text-align: right;
     transition: all ease 0.5s;
 }
@@ -881,7 +945,7 @@ a.active{
     font-weight: 700;
 }
 .exp a:hover{
-    color: #00ff51;   
+    color: #B6BBC4;   
 }
 h3{
     margin: 0.5%;
@@ -916,7 +980,7 @@ h3{
         height: 60%;
     }
     .exp p{
-        margin-bottom: 55px;
+        margin-bottom: 40px;
     }
     .exp a{
         font-size: 15px;
@@ -929,15 +993,12 @@ h3{
     width: 100%;
     background-color: #000;
     display: flex;
-    /* position: relative; */
     justify-content: center;
     align-items: center;
 }
 #imgbox .context{
     height: 100%;
     width: 25%;
-
-    background-color: #00ff51;
     border-right: 1px solid black;
     
 }
@@ -949,15 +1010,18 @@ h3{
 #imgbox .abt{
     height: 250px;
     width: 90%;
-    margin-right: 23%;
-    margin-top: 10%;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: center;
     border-radius: 5px;
     color: whitesmoke;
     position: absolute;
-    /* z-index: 1; */
-    backdrop-filter: blur(10px);
-    background: #00000091;
+    backdrop-filter: blur(5px);
+    background: #31304db2;
     padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /**______media quary for image box__________**/
 @media (max-width:850px) {
@@ -985,10 +1049,11 @@ h3{
     }
     #imgbox .abt{
         height: 80%;
-        margin-left: 22%;
+        margin: 0;
     }
     .abt p{
         font-size: 12px;
+        line-height: 1rem;
     }
 }
 /**______________contect__________________**/
@@ -1021,7 +1086,7 @@ h3{
     height: 10%;
 }
 .drop-msg input::placeholder{
-    color: #000;
+    color: #161A30;
 }
 .drop-msg textarea{
     background: none;
@@ -1034,7 +1099,7 @@ h3{
     height: 10%;
 }
 .drop-msg textarea::placeholder{
-    color: #000;
+    color: #161A30;
 }
 .send-msg{
     height: 60px;
@@ -1042,7 +1107,7 @@ h3{
     font-size: 17px;
     font-weight: 600;
     font-family: cursive;
-    background-color: whitesmoke;
+    background-color: #B6BBC4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1076,6 +1141,7 @@ h3{
 .contectbox button{
     height: 60px;
     width: 230px;
+    background-color: #B6BBC4;
     font-size: 17px;
     font-weight: 600;
     margin-left: 150px;
@@ -1094,12 +1160,21 @@ h3{
     width: 45px;
     font-size: 25px;
     border-radius: 50%;
-    background-color: whitesmoke;
+    background-color: #B6BBC4;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all ease 0.5s;
     cursor: pointer;
+}
+#social .media:active{
+    scale: 0.9;
+}
+#social .media a{
+    color: #161A30;
+}
+#social .media:hover a{
+    color: whitesmoke;
 }
 #social .media:hover{
     transform: rotateY(180deg);
@@ -1232,7 +1307,7 @@ h3{
 }
 
 /**_________copyright__________**/
-.copyright{
+.copyright {
     width: 100%;
     height: 50px;
     display: flex;
@@ -1265,16 +1340,22 @@ footer{
 } 
 footer .top{
     width: 100%;
-    background-color: #4e5e58c4;
+    background-color: #B6BBC4;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all ease 0.5s;
 }
 footer a{
-    color: whitesmoke;
+    color: #161A30;
+    font-weight: 600;
     text-transform:none;
 }
-.top:hover{
-    background-color: #2e2e2e;
+.top:hover a{
+    color: #F4DFC8;
 } 
+.top:hover{
+    background-color: #161A30;
+    
+}
