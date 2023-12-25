@@ -35,12 +35,13 @@ body #back{
     box-shadow: 0 5px 10px black;
     cursor: pointer;
 }
-#back i{
+#back a{
     font-size: 30px;
+    color: #31304D;
 }
 #back:hover a i {
     bottom: 5px;
-    color: #31304D;
+    color:#B6BBC4;
 }
 #back:hover{
     scale: 1.1;
@@ -84,7 +85,7 @@ nav{
 }
 
 label.logo{
-    color:rgb(182, 187, 196);
+    color:#b6bbc4;
     padding: 0 20px;
     line-height: 10vh;
     font-size: 1.5rem;
